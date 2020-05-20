@@ -1,21 +1,25 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1 class="title is-1">Donation Form</h1>
+    <SchemaForm :schema="mySchema" :value="formData" />
   </div>
 </template>
 
 <script>
-
-import HelloWorld from './components/HelloWorld.vue'
+import { SchemaForm } from 'formvuelatte';
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    SchemaForm
+  },
+  data() {
+    return {
+      formData: {},
+      mySchema: { 
+        //some schema here
+      }
+    }
   }
 }
 </script>
 
-<style>
-</style>
