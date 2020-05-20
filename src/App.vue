@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <h1 class="title is-1">Donation Form</h1>
     <div>
+      <h2 class="title is-2">Donation Form</h2>
+    </div>
       <p>Step: {{ step + 1 }}</p>
-
       <SchemaWizard
         :schema="schema"
         :step="step"
@@ -20,9 +20,6 @@
           Back
         </b-button>
       </SchemaWizard>
-
-      <p>{{ userData }}</p>
-    </div>
   </div>
 </template>
 
@@ -35,7 +32,6 @@ const SCHEMA = [
     firstName: {
       component: Input,
       label: 'First Name',
-      lele: 'olele',
     },
     lastName: {
       component: Input,
@@ -79,10 +75,14 @@ export default {
 </script>
 <style lang="scss">
  #app {
-   .title {
-     text-align: center;
+   h2 {
+     margin-bottom: 40px;
    }
-   display: flex;
-   flex-direction: row;
+   button {
+     margin-top: 20px;
+   }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
  }
 </style>
